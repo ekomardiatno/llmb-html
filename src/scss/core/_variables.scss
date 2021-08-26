@@ -1,0 +1,20 @@
+$main_theme:                    #FFD369;
+$tertiary_theme:                #082032;
+
+$brand-primary:         		#2D46B9;
+$brand-secondary:               #E7E0C9;
+$brand-success:         		#297F87;
+$brand-info:            		#9DDAC6;
+$brand-warning:         		#FFD369;
+$brand-danger:          		#FF4848;
+
+$black:                         #151515;
+$gray:                          #393E46;
+$gray_light:                    lighten(#333, 30%);
+$gray_lighter:                  lighten(#333, 60%);
+$gray_dark:                     darken(#333, 5%);
+$gray_darker:                   darken(#333, 10%);
+
+$body_bg:                       #fff;
+$text_color:                    $black;
+$text_muted:                    $gray_light;

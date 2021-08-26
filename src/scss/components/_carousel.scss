@@ -1,0 +1,22 @@
+.carousel::after {
+    content: '';
+    height: 5rem;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-position-y: center;
+    background-repeat: repeat-x;
+    background-position-x: center;
+}
+
+.carousel-item {
+    max-height: 100vh;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
