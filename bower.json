@@ -1,0 +1,27 @@
+{
+  "name": "community",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Eko Mardiatno"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Template"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "3.5.1",
+    "bootstrap": "4.6.0",
+    "popper.js": "1.16.1",
+    "ionicons": "5.5.2"
+  }
+}

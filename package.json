@@ -1,0 +1,35 @@
+{
+  "name": "community",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/ekomardiatno/community.git"
+  },
+  "keywords": [
+    "Template"
+  ],
+  "author": "Eko Mardiatno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/ekomardiatno/community/issues"
+  },
+  "homepage": "https://gitlab.com/ekomardiatno/community#readme",
+  "dependencies": {
+    "gulp": "^4.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-file-include": "^2.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "node-sass": "^6.0.1",
+    "uglify-save-license": "^0.4.1"
+  }
+}
