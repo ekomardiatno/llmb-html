@@ -1,14 +1,26 @@
 .carousel::after {
     content: '';
-    height: 5rem;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,.5), transparent);
+    background-image: url(../images/overlay.png);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    background-position-y: center;
-    background-repeat: repeat-x;
-    background-position-x: center;
+    bottom: 0;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: right;
+}
+
+.carousel::before {
+    content: '';
+    background-image: url(../images/layer.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    z-index: 1;
 }
 
 .carousel-item {
