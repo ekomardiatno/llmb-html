@@ -1,4 +1,42 @@
 .section-content {
     padding-top: 3rem;
     padding-bottom: 3rem;
+    position: relative;
+    &:nth-child(2n+2) {
+        background-color: $gray_lighter;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url(../images/overlay-3.png);
+            background-size: 100% auto;
+            background-position-x: left;
+            background-position-y: top;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .section-content {
+        .boundary {
+            width: 150px;
+            height: 30px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .section-content {
+        h1 {
+            font-size: 1.75rem;
+        }
+        .boundary {
+            width: 100px;
+            height: 25px;
+        }
+    }
 }

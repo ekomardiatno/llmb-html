@@ -21,7 +21,6 @@
   "dependencies": {
     "jquery": "3.5.1",
     "bootstrap": "4.6.0",
-    "popper.js": "1.16.1",
-    "ionicons": "5.5.2"
+    "popper.js": "1.16.1"
   }
 }

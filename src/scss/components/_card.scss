@@ -1,0 +1,94 @@
+.card {
+    height: 100%;
+    border: 0;
+    box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.15), 0 8px 9px -5px rgba(0, 0, 0, 0.06) !important;
+    border-radius: 10px;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../images/overlay-2-portrait.png);
+        background-size: 85% auto;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+
+    &::after {
+        content: "";
+        background-image: url(../images/overlay-4.png);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: left top;
+        background-size: auto 50px;
+        background-repeat: no-repeat;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        object-position: center;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        &::after {
+            content: "";
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.2));
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+        &.darker {
+            &::after {
+                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
+            }
+        }
+    }
+
+    .card-body {
+        position: relative;
+    }
+}
+
+.card-container-link {
+    color: $text_color;
+    &:hover,
+    &:focus {
+        color: $text_color;
+        text-decoration: none;
+    }
+}
+
+.card-info-on-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+@media (max-width: 991px) {
+    .card {
+        .card-img-top {
+            height: 240px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+}

@@ -1,20 +1,55 @@
-$main_theme:                    #FFD369;
-$tertiary_theme:                #082032;
+$main_theme: #ffcc29;
+$tertiary_theme: #082032;
 
-$brand-primary:         		#2D46B9;
-$brand-secondary:               #E7E0C9;
-$brand-success:         		#297F87;
-$brand-info:            		#9DDAC6;
-$brand-warning:         		#FFD369;
-$brand-danger:          		#FF4848;
+$colors: (
+    "white": #fff,
+    "dark": $tertiary_theme,
+    "light": #f7f6f2,
+    "primary": #2d46b9,
+    "default": $main_theme,
+    "secondary": #e7e0c9,
+    "success": #01937c,
+    "warning": #ffd369,
+    "danger": #ff2442,
+    "info": #9ddac6,
+);
 
-$black:                         #151515;
-$gray:                          #393E46;
-$gray_light:                    lighten(#333, 30%);
-$gray_lighter:                  lighten(#333, 60%);
-$gray_dark:                     darken(#333, 5%);
-$gray_darker:                   darken(#333, 10%);
+$sizes: ("sm", "md", "lg", "xl");
 
-$body_bg:                       #fff;
-$text_color:                    $black;
-$text_muted:                    $gray_light;
+$brand-default: $main_theme;
+$brand-primary: map-get($colors, "primary");
+$brand-secondary: map-get($colors, "secondary");
+$brand-success: map-get($colors, "success");
+$brand-info: map-get($colors, "info");
+$brand-warning: map-get($colors, "warning");
+$brand-danger: map-get($colors, "danger");
+
+$white: #fff;
+$black: #151515;
+$gray: #393e46;
+$gray_light: lighten($gray, 43%);
+$gray_lighter: lighten($gray, 72%);
+$gray_dark: darken($gray, 5%);
+$gray_darker: darken($gray, 10%);
+
+$body_bg: $white;
+$text_color: $tertiary_theme;
+$text_muted: $gray_light;
+$text_theme: $main_theme;
+$text_dark: $tertiary_theme;
+
+$breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+) !default;
+
+$rem_sizes: (
+    "-5": -3rem,
+    "-4": -1.5rem,
+    "-3": -1rem,
+    "-2": -0.5rem,
+    "-1": -0.25rem,
+);

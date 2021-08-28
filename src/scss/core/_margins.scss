@@ -1,0 +1,39 @@
+@each $name, $size in $rem_sizes {
+    .mt-#{$name},
+    .my-#{$name} {
+        margin-top: $size !important;
+    }
+    .mb-#{$name},
+    .my-#{$name} {
+        margin-bottom: $size !important;
+    }
+    .ml-#{$name},
+    .mx-#{$name} {
+        margin-left: $size !important;
+    }
+    .mr-#{$name},
+    .mr-#{$name} {
+        margin-right: $size !important;
+    }
+
+    @each $break, $width in $breakpoints {
+        @media (min-width: $width) {
+            .mt-#{$break}-#{$name},
+            .my-#{$break}-#{$name} {
+                margin-top: $size !important;
+            }
+            .mb-#{$break}-#{$name},
+            .my-#{$break}-#{$name} {
+                margin-bottom: $size !important;
+            }
+            .ml-#{$break}-#{$name},
+            .mx-#{$break}-#{$name} {
+                margin-left: $size !important;
+            }
+            .mr-#{$break}-#{$name},
+            .mr-#{$break}-#{$name} {
+                margin-right: $size !important;
+            }
+        }
+    }
+}

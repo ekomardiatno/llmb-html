@@ -66,8 +66,7 @@ function scripts() {
 function fonts() {
 
   return gulp.src([
-      'src/fonts/*.**',
-      config.bower + '/ionicons/docs/fonts/*.**',
+      'src/fonts/*.**'
     ])
     .pipe(gulp.dest('./dist/assets/fonts'))
     .pipe(connect.reload())
@@ -79,8 +78,7 @@ function css() {
 
   return gulp.src([
       config.bower + '/bootstrap/dist/css/bootstrap.min.css',
-      config.bower + '/bootstrap/dist/css/bootstrap.min.css.map',
-      config.bower + '/ionicons/docs/css/ionicons.min.css',
+      config.bower + '/bootstrap/dist/css/bootstrap.min.css.map'
     ])
     .pipe(gulp.dest('./dist/assets/css'))
 

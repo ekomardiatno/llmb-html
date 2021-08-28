@@ -1,0 +1,14 @@
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    span {
+        vertical-align: middle;
+    }
+}
+
+@each $name, $color in $colors {
+    .badge-#{$name} {
+        background-color: $color;
+        color: color-yiq($color);
+    }
+}

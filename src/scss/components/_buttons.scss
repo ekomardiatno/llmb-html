@@ -1,0 +1,18 @@
+.btn {
+    @include buttons();
+    span {
+        vertical-align: middle;
+    }
+}
+
+$paddings: ('sm': 0.5rem 1.25rem, 'lg': 1rem 1.875rem, 'xl': 1.5rem 2rem);
+$font-sizes: ('sm': 0.875rem, 'lg': 1.25rem, 'xl': 1.5rem);
+
+@each $size in $sizes {
+    .btn-#{$size},
+    .btn-#{$size}-group > .btn {
+        padding: map-get($paddings, 'sm');
+        font-size: map-get($font-sizes, 'sm');
+        line-height: 1.5;
+    }
+}

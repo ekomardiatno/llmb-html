@@ -18,7 +18,21 @@
 // Core
 @import "core/variables";
 @import "core/scaffolding";
+@import "core/margins";
+
+// Mixins
+@import "mixins/colors";
+@import "mixins/buttons";
 
 // Components
 @import "components/carousel";
 @import "components/section";
+@import "components/navbar";
+@import "components/container";
+@import "components/card";
+@import "components/buttons";
+@import "components/text_color";
+@import "components/background_color";
+@import "components/icon";
+@import "components/badge";
+@import "components/footer";

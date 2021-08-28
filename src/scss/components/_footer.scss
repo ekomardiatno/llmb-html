@@ -1,0 +1,100 @@
+.footer {
+    position: relative;
+    background-image: url(../images/overlay-2.png);
+    background-size: auto 360px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: lighten($tertiary_theme, 1.25%);
+    .footer-top {
+        padding: 2rem 0;
+    }
+    .footer-bottom {
+        background-color: $tertiary_theme;
+        padding: 1rem 0;
+        position: relative;
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(../images/overlay-4.png);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+        }
+        &::before {
+            transform: scaleY(-1);
+        }
+        &::after {
+            opacity: 0;
+        }
+    }
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin: 0 -0.5rem;
+    img {
+        width: 80px;
+        height: auto;
+    }
+
+    .footer-title-short {
+        letter-spacing: 0.225rem;
+    }
+
+    .footer-logo-title {
+        text-align: center;
+    }
+
+    img,
+    .footer-logo-title {
+        margin: 0 0.5rem;
+    }
+}
+
+.footer-social-container {
+    margin: 0 -0.5rem;
+}
+
+.footer-social {
+    font-size: 2.25rem;
+    color: $white;
+    margin: 0 0.5rem;
+    text-shadow: 0 8px 26px rgba(248, 248, 248, 0.15), 0 8px 9px rgba(255, 255, 255, 0.06) !important;
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        .footer-bottom {
+            &::after {
+                transform: scaleX(-1) scaleY(-1);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .footer-logo {
+        img {
+            width: 60px;
+        }
+
+        .footer-logo-title {
+            .footer-title-short {
+                font-size: 1.215rem;
+            }
+            p {
+                font-size: 80%;
+            }
+        }
+    }
+}

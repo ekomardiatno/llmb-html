@@ -14,5 +14,9 @@
  * ============================================= */
 
 if (typeof jQuery === 'undefined') {
-    throw new Error('Koma Plugin\'s JavaScript requires jQuery')
-  }
+  throw new Error('Koma Plugin\'s JavaScript requires jQuery')
+}
+
+$(function () {
+  
+})

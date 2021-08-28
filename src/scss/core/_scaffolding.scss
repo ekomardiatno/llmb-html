@@ -34,10 +34,11 @@
 }
 
 body {
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   background-color: $body_bg;
   color: $text_color;
+  font-size: 15px;
 }
 
 h1,
@@ -46,7 +47,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Museo", "Fira Sans", sans-serif;
+  font-family: "Museo", "Poppins", sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h3,
+h2 {
+  font-weight: 700;
 }
 
 .text-muted {
@@ -63,6 +73,30 @@ h6 {
   height: 30px;
   width: 190px;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% auto;
+  background-position: center;
   margin: 0 auto;
+
+  &.white {
+    background-image: url(../images/motif-white.png);
+  }
+
+  &.dark {
+    background-image: url(../images/motif-dark.png);
+  }
+
+  &.sm {
+    width: 100px;
+  }
+}
+
+.blur {
+  box-shadow: inset 0 0 2px #fefefed1;
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  backdrop-filter: saturate(200%) blur(30px);
+  background-color: hsla(0, 0%, 100%, 0.5) !important;
+}
+
+.text-shadow {
+  text-shadow: 0 8px 26px hsla(0deg, 0, 0.08, 0.15), 0 8px 9px hsla(0deg, 0, 0.08, 0.06) !important;
 }

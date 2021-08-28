@@ -1,0 +1,34 @@
+@mixin color-yiq($color, $property: color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299)+ ($g * 587)+ ($b * 114))/1000;
+
+  @if ($yiq >= 128) {
+    #{$property}: darken($color, 60%);
+  } @else {
+    #{$property}: lighten($color, 60%);
+  }
+}
+
+@function color-opacity($color, $opacity) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  @return rgba($r, $g, $b, $opacity);
+}
+
+@function color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+  $yiq: (($r * 299)+ ($g * 587)+ ($b * 114))/1000;
+
+  @if ($yiq >= 128) {
+    @return darken($color, 60%);
+  } @else {
+    @return lighten($color, 60%);
+  }
+}
