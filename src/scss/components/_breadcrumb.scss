@@ -13,11 +13,28 @@
         }
 
         &.active {
-            color: lighten($text-dark, 10%) !important;
+            color: color-opacity($text-dark, .75) !important;
         }
 
         +.breadcrumb-item::before {
-            color: lighten($text-dark, 10%);
+            color: color-opacity($text-dark, .75);
+        }
+    }
+
+    &.light {
+        li.breadcrumb-item {
+            a {
+                color: $white !important;
+                &:hover {
+                    color: $white !important;
+                }
+            }
+            &.active {
+                color: color-opacity($white, .75) !important;
+            }
+            +.breadcrumb-item::before {
+                color: color-opacity($white, .75);
+            }
         }
     }
 }

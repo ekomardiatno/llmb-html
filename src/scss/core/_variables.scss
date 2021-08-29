@@ -37,6 +37,7 @@ $text_color: $tertiary_theme;
 $text_muted: $gray_light;
 $text_theme: $main_theme;
 $text_dark: $tertiary_theme;
+$border_color: lighten($gray_light, 25%);
 
 $breakpoints: (
     xs: 0,

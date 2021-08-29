@@ -1,7 +1,5 @@
 .header-page {
-    .header-page-content {
-        position: relative;
-    }
+    position: relative;
     &::before {
         content: '';
         position: absolute;
@@ -15,6 +13,10 @@
         background-position-x: right;
         background-position-y: top;
         transform: scaleX(-1);
+    }
+    
+    .header-page-content {
+        position: relative;
     }
 }
 
