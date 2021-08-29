@@ -1,11 +1,14 @@
 .card {
-    height: 100%;
     border: 0;
     box-shadow: 0 8px 26px -4px rgba(0, 0, 0, 0.15), 0 8px 9px -5px rgba(0, 0, 0, 0.06) !important;
     border-radius: 10px;
     overflow: hidden;
+    
+    &:not(.contain) {
+        height: 100%;
+    }
 
-    &::before {
+    &:not(.clear)::before {
         content: "";
         position: absolute;
         top: 0;
@@ -18,7 +21,7 @@
         background-position: bottom right;
     }
 
-    &::after {
+    &:not(.clear)::after {
         content: "";
         background-image: url(../images/overlay-4.png);
         position: absolute;
@@ -45,7 +48,7 @@
         }
         &::after {
             content: "";
-            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.2));
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.2));
             position: absolute;
             top: 0;
             right: 0;
@@ -54,13 +57,22 @@
         }
         &.darker {
             &::after {
-                background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
             }
         }
     }
 
     .card-body {
         position: relative;
+    }
+}
+
+.card-header {
+    background-color: transparent;
+    border: 0;
+    padding-bottom: 0;
+    .card-title {
+        font-size: 1.115rem;
     }
 }
 

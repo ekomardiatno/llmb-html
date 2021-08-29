@@ -1,43 +1,43 @@
 @each $name, $size in $rem_sizes {
-    .m-#{$name} {
-        margin: $size!important
+    .p-#{$name} {
+        margin: $size !important;
     }
-    .mt-#{$name},
-    .my-#{$name} {
+    .pt-#{$name},
+    .py-#{$name} {
         margin-top: $size !important;
     }
-    .mb-#{$name},
-    .my-#{$name} {
+    .pb-#{$name},
+    .py-#{$name} {
         margin-bottom: $size !important;
     }
-    .ml-#{$name},
-    .mx-#{$name} {
+    .pl-#{$name},
+    .px-#{$name} {
         margin-left: $size !important;
     }
-    .mr-#{$name},
-    .mr-#{$name} {
+    .pr-#{$name},
+    .pr-#{$name} {
         margin-right: $size !important;
     }
 
     @each $break, $width in $breakpoints {
         @media (min-width: $width) {
-            .m-#{$break}-#{$name} {
+            .p-#{$break}-#{$name} {
+                margin: $size !important;
+            }
+            .pt-#{$break}-#{$name},
+            .py-#{$break}-#{$name} {
                 margin-top: $size !important;
             }
-            .mt-#{$break}-#{$name},
-            .my-#{$break}-#{$name} {
-                margin-top: $size !important;
-            }
-            .mb-#{$break}-#{$name},
-            .my-#{$break}-#{$name} {
+            .pb-#{$break}-#{$name},
+            .py-#{$break}-#{$name} {
                 margin-bottom: $size !important;
             }
-            .ml-#{$break}-#{$name},
-            .mx-#{$break}-#{$name} {
+            .pl-#{$break}-#{$name},
+            .px-#{$break}-#{$name} {
                 margin-left: $size !important;
             }
-            .mr-#{$break}-#{$name},
-            .mr-#{$break}-#{$name} {
+            .pr-#{$break}-#{$name},
+            .pr-#{$break}-#{$name} {
                 margin-right: $size !important;
             }
         }

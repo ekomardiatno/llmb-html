@@ -63,10 +63,6 @@ h2 {
   color: $text_muted !important;
 }
 
-.bg-light {
-  background-color: $main_theme !important;
-}
-
 .boundary {
   content: "";
   background-image: url(../images/motif.png);
@@ -99,4 +95,16 @@ h2 {
 
 .text-shadow {
   text-shadow: 0 8px 26px hsla(0deg, 0, 0.08, 0.15), 0 8px 9px hsla(0deg, 0, 0.08, 0.06) !important;
+}
+
+.medium {
+  font-size: 90%;
+}
+
+a {
+  color: $brand_success;
+  &:hover {
+    color: darken($brand_success, 10%);
+    text-decoration: none;
+  }
 }

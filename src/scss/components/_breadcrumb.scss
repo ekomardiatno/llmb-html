@@ -1,0 +1,24 @@
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+
+    li.breadcrumb-item {
+        font-weight: 700;
+        a {
+            color: $text-dark !important;
+            &:focus,
+            &:hover {
+                color: $text-dark !important;
+                text-decoration: none;
+            }
+        }
+
+        &.active {
+            color: lighten($text-dark, 10%) !important;
+        }
+
+        +.breadcrumb-item::before {
+            color: $text-dark;
+        }
+    }
+}

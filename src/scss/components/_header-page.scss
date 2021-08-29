@@ -1,0 +1,25 @@
+.header-page {
+    .header-page-content {
+        position: relative;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../images/overlay-2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: top;
+        transform: scaleX(-1);
+    }
+}
+
+@media(min-width: 1200px) {
+    .header-page-content {
+        margin-right: 30%;
+    }
+}

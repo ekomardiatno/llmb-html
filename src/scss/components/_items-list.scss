@@ -1,0 +1,26 @@
+.items-list {
+    list-style: none;
+    padding: 0;
+}
+
+.list-item {
+    a {
+        color: $text-dark;
+        display: flex;
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+            box-shadow: 0 8px 26px -4px rgba(0,0,0,.15),0 8px 9px -5px rgba(0,0,0,.06)!important;
+        }
+    }
+}
+
+.item-detail {
+    
+}
