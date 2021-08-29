@@ -6,7 +6,6 @@
         font-weight: 700;
         a {
             color: $text-dark !important;
-            &:focus,
             &:hover {
                 color: $text-dark !important;
                 text-decoration: none;
@@ -18,7 +17,7 @@
         }
 
         +.breadcrumb-item::before {
-            color: $text-dark;
+            color: lighten($text-dark, 10%);
         }
     }
 }
