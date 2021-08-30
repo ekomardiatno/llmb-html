@@ -38,7 +38,13 @@ body {
   font-weight: 400;
   background-color: $body_bg;
   color: $text_color;
-  font-size: 15px;
+  font-size: 14px;
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 16px;
+  }
 }
 
 h1,
@@ -91,10 +97,14 @@ h2 {
   -webkit-backdrop-filter: saturate(200%) blur(30px);
   backdrop-filter: saturate(200%) blur(30px);
   background-color: hsla(0, 0%, 100%, 0.5) !important;
+  &.strong {
+    background-color: hsla(0, 0%, 100%, 0.8) !important;
+  }
 }
 
 .text-shadow {
-  text-shadow: 0 8px 26px hsla(0deg, 0, 0.08, 0.15), 0 8px 9px hsla(0deg, 0, 0.08, 0.06) !important;
+  text-shadow: 0 8px 26px hsla(0deg, 0, 0.08, 0.15),
+    0 8px 9px hsla(0deg, 0, 0.08, 0.06) !important;
 }
 
 .medium {
@@ -111,4 +121,96 @@ a {
 
 .vertical-middle {
   vertical-align: middle;
+}
+
+@each $name, $d in $dimensions {
+  .min-w-#{$name} {
+    width: $d !important;
+  }
+  .min-h-#{$name} {
+    height: $d !important;
+  }
+  .w-#{$name} {
+    width: $d !important;
+  }
+  .h-#{$name} {
+    height: $d !important;
+  }
+  .max-w-#{$name} {
+    width: $d !important;
+  }
+  .max-h-#{$name} {
+    height: $d !important;
+  }
+
+  @each $break in $breakpoints {
+    .min-w-#{$break}-#{$name} {
+      width: $d !important;
+    }
+    .min-h-#{$break}-#{$name} {
+      height: $d !important;
+    }
+    .w-#{$break}-#{$name} {
+      width: $d !important;
+    }
+    .h-#{$break}-#{$name} {
+      height: $d !important;
+    }
+    .max-w-#{$break}-#{$name} {
+      width: $d !important;
+    }
+    .max-h-#{$break}-#{$name} {
+      height: $d !important;
+    }
+  }
+}
+
+@each $name, $fit in $fits {
+  .object-fit-#{$name} {
+    object-fit: $fit !important;
+  }
+}
+
+@each $name, $pos in $positions {
+  .object-position-#{$name} {
+    object-position: $pos !important;
+  }
+}
+
+.rounded {
+  border-radius: map-get($round_size, "md") !important;
+}
+.rounded-top, .rounded-top-left {
+  border-top-left-radius: map-get($round_size, 'md') !important;
+}
+.rounded-top, .rounded-top-right {
+  border-top-right-radius: map-get($round_size, 'md') !important;
+}
+.rounded-bottom, .rounded-bottom-left {
+  border-bottom-left-radius: map-get($round_size, 'md') !important;
+}
+.rounded-bottom, .rounded-bottom-right {
+  border-bottom-right-radius: map-get($round_size, 'md') !important;
+}
+
+@each $name, $r in $round_size {
+  .rounded-#{$name} {
+    border-radius: $r !important;
+  }
+  .rounded-#{$name}-top,
+  .rounded-#{$name}-top-left {
+    border-top-left-radius: $r !important;
+  }
+  .rounded-#{$name}-top,
+  .rounded-#{$name}-top-right {
+    border-top-right-radius: $r !important;
+  }
+  .rounded-#{$name}-bottom,
+  .rounded-#{$name}-bottom-left {
+    border-bottom-left-radius: $r !important;
+  }
+  .rounded-#{$name}-bottom,
+  .rounded-#{$name}-bottom-right {
+    border-bottom-right-radius: $r !important;
+  }
 }

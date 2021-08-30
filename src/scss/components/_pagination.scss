@@ -1,0 +1,45 @@
+.page-link {
+  background-color: $white;
+  border-color: $border_color;
+  color: $tertiary_theme;
+  height: 2.25rem;
+  min-width: 2.25rem;
+  text-align: center;
+  border-radius: 50rem !important;
+  margin: 0 0.25rem !important;
+  padding: .5rem .5rem;
+  &.icon {
+    padding-top: .42rem;
+    padding-bottom: .42rem;
+  }
+  &:focus {
+    box-shadow: 0 2px 12px 0 color-opacity($main_theme, 0.5) !important;
+  }
+  &:hover {
+    background-color: $main_theme;
+    color: color-yiq($main_theme);
+    border-color: $main_theme;
+    box-shadow: 0 2px 12px 0 color-opacity($main_theme, 0.5) !important;
+  }
+}
+
+.pagination {
+  margin: 0 -0.25rem;
+}
+
+.page-item {
+  &.active {
+    .page-link {
+      background-color: $main_theme;
+      border-color: $main_theme;
+      color: color-yiq($main_theme);
+    }
+  }
+  &.disabled {
+    .page-link {
+      background: lighten($gray_light, 25%);
+      border-color: lighten($gray_light, 25%);
+      color: color-yiq(lighten($gray_light, 25%));
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@each $name, $size in $rem_sizes {
+@each $name, $size in $lengths {
     .p-#{$name} {
         margin: $size !important;
     }
@@ -15,7 +15,7 @@
         margin-left: $size !important;
     }
     .pr-#{$name},
-    .pr-#{$name} {
+    .px-#{$name} {
         margin-right: $size !important;
     }
 
@@ -37,7 +37,7 @@
                 margin-left: $size !important;
             }
             .pr-#{$break}-#{$name},
-            .pr-#{$break}-#{$name} {
+            .px-#{$break}-#{$name} {
                 margin-right: $size !important;
             }
         }
