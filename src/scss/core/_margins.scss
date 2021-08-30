@@ -1,6 +1,6 @@
 @each $name, $size in $lengths {
     .m-#{$name} {
-        margin: $size!important
+        margin: $size !important;
     }
     .mt-#{$name},
     .my-#{$name} {
@@ -18,7 +18,8 @@
     .mx-#{$name} {
         margin-right: $size !important;
     }
-
+}
+@each $name, $size in $lengths {
     @each $break, $width in $breakpoints {
         @media (min-width: $width) {
             .m-#{$break}-#{$name} {

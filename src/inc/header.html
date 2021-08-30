@@ -15,14 +15,16 @@
 <body>
 
   <!-- Header -->
-  <nav class="navbar py-0 fixed-top navbar-expand-lg">
-    <div class="navbar-overlay"></div>
-    <a class="navbar-brand" href="#">
-      <img src="/assets/images/logo-xs.png" class="d-inline-block align-top" alt="" />
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  <nav data-top-target="50" class="navbar fixed-top navbar-expand-lg scrlspy-affix">
+    <div class="d-flex align-items-center md--2">
+      <a class="navbar-brand mx-2" href="#">
+        <img src="/assets/images/logo-xs.png" class="d-inline-block align-top" alt="" />
+      </a>
+      <h5 class="title-brand mx-2 mb-0 font-weight-bold">Lembaga Laskar Melayu Bersatu</h5>
+    </div>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <ion-icon class="text-dark" name="menu"></ion-icon>
+      <ion-icon name="menu"></ion-icon>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -49,8 +51,10 @@
         </li>
       </ul>
       <form action="/search.html" class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2 rounded-pill border-0 blur strong" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-sm-2 rounded-pill border-0 blur strong" type="search" placeholder="Search"
+          aria-label="Search">
       </form>
     </div>
+    <div class="navbar-overlay"></div>
   </nav>
   <!-- End Header -->

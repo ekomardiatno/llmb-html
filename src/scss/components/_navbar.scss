@@ -1,33 +1,50 @@
 .navbar {
-    -webkit-backdrop-filter: saturate(200%) blur(30px);
-    backdrop-filter: saturate(200%) blur(30px);
-    background-color: color-opacity($main_theme, 0.5) !important;
-    margin: 1rem 3rem !important;
-    border-radius: 40px !important;
-    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16) !important;
+    padding: 1rem 3rem;
+    transition: padding 0.35s cubic-bezier(1, 0, 0, 1);
     .navbar-nav {
         .nav-link {
             padding-left: 1rem;
             padding-right: 1rem;
             font-family: "Museo", sans-serif;
             font-weight: 700;
-            color: $text_dark;
+            color: $white;
         }
     }
 }
 
 .navbar-overlay {
-    background-image: url(../images/overlay-4-dark.png);
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-position: left top;
-    background-size: auto 60px;
-    background-repeat: no-repeat;
     z-index: -1;
-    border-radius: 40px;
+    opacity: 0;
+    transition: opacity 0.35s cubic-bezier(1, 0, 0, 1);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-backdrop-filter: saturate(200%) blur(30px);
+        backdrop-filter: saturate(200%) blur(30px);
+        background-color: color-opacity($main_theme, 0.5) !important;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16) !important;
+    }
+    &::after {
+        content: "";
+        background-image: url(../images/overlay-4-dark.png);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: left top;
+        background-size: auto 76px;
+        background-repeat: no-repeat;
+    }
 }
 
 .dropdown-menu {
@@ -45,7 +62,7 @@
         padding: 0.5rem 1rem;
         border-radius: 10px;
         margin-bottom: 5px;
-        color: color-opacity(color-yiq($tertiary_theme), .75);
+        color: color-opacity(color-yiq($tertiary_theme), 0.75);
         &:nth-last-child(1) {
             margin-bottom: 0;
         }
@@ -54,20 +71,23 @@
             -webkit-backdrop-filter: saturate(200%) blur(30px) !important;
             backdrop-filter: saturate(200%) blur(30px) !important;
             background-color: rgba(255, 255, 255, 0.15) !important;
-            color: color-opacity(color-yiq($tertiary_theme), .75);
+            color: color-opacity(color-yiq($tertiary_theme), 0.75);
         }
     }
 }
 
 .navbar-brand {
-    background: color-opacity($white, .5);
+    background: color-opacity($white, 0.5);
     border-radius: 50rem;
-    padding: .3125rem;
-    margin: .3125rem 0;
+    padding: 0.3125rem;
+    margin: 0.3125rem 0;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.16);
     img {
         width: 40px;
         height: 40px;
+    }
+    & ~ .title-brand {
+        color: $white;
     }
 }
 
@@ -76,22 +96,48 @@
     padding: 0 !important;
     ion-icon {
         font-size: 1.75rem;
-        color: $text-dark;
+        color: $white;
+    }
+}
+
+.affix {
+    .navbar-overlay {
+        opacity: 1;
+    }
+    .navbar-nav {
+        .nav-link {
+            color: $text_dark;
+        }
+    }
+    .navbar-toggler {
+        ion-icon {
+            color: $text_dark;
+        }
+    }
+    .navbar-brand {
+        & ~ .title-brand {
+            color: $text_dark;
+        }
     }
 }
 
 @media (min-width: 992px) {
+    .affix {
+        &.navbar {
+            padding: 0.5rem 3rem;
+        }
+    }
     .navbar-expand-lg {
         .navbar-nav {
             .dropdown-menu {
-                margin-top: .215rem;
+                margin-top: 0.215rem;
             }
         }
     }
 
     .dropdown-menu {
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             right: 2.215rem;
             top: -8px;
@@ -106,7 +152,6 @@
 
 @media (max-width: 991px) {
     .navbar {
-        margin: 1rem 2rem !important;
         border-radius: 25px !important;
         padding: 0.5rem 2rem;
         .navbar-nav {
@@ -117,25 +162,41 @@
         }
     }
 
-    .navbar-overlay {
-        border-radius: 25px;
+    .navbar-brand {
+        & ~ .title-brand {
+            display: none;
+        }
+    }
+
+    .navbar-toggler {
+        &:not(.collapsed) {
+            ion-icon {
+                color: $text_dark;
+            }
+        }
     }
 
     .dropdown-menu {
         width: 100%;
     }
+
+    .navbar-collapse {
+        &.show {
+            & ~ .navbar-overlay {
+                opacity: 1;
+            }
+        }
+    }
 }
 
 @media (max-width: 767px) {
     .navbar {
-        margin: 1rem !important;
-        padding: 0rem 1rem !important;
+        padding: 0.25rem 1rem !important;
         border-radius: 20px !important;
     }
 
     .navbar-overlay {
-        border-radius: 20px;
-        background-size: auto 50px;
+        background-size: auto 58px;
     }
     .navbar-brand {
         img {

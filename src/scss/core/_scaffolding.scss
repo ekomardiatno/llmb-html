@@ -142,25 +142,29 @@ a {
   .max-h-#{$name} {
     height: $d !important;
   }
+}
 
-  @each $break in $breakpoints {
-    .min-w-#{$break}-#{$name} {
-      width: $d !important;
-    }
-    .min-h-#{$break}-#{$name} {
-      height: $d !important;
-    }
-    .w-#{$break}-#{$name} {
-      width: $d !important;
-    }
-    .h-#{$break}-#{$name} {
-      height: $d !important;
-    }
-    .max-w-#{$break}-#{$name} {
-      width: $d !important;
-    }
-    .max-h-#{$break}-#{$name} {
-      height: $d !important;
+@each $name, $d in $dimensions {
+  @each $break, $dimension in $breakpoints {
+    @media (min-width: $dimension) {
+      .min-w-#{$break}-#{$name} {
+        width: $d !important;
+      }
+      .min-h-#{$break}-#{$name} {
+        height: $d !important;
+      }
+      .w-#{$break}-#{$name} {
+        width: $d !important;
+      }
+      .h-#{$break}-#{$name} {
+        height: $d !important;
+      }
+      .max-w-#{$break}-#{$name} {
+        width: $d !important;
+      }
+      .max-h-#{$break}-#{$name} {
+        height: $d !important;
+      }
     }
   }
 }

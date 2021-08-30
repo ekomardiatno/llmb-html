@@ -18,7 +18,8 @@
     .px-#{$name} {
         margin-right: $size !important;
     }
-
+}
+@each $name, $size in $lengths {
     @each $break, $width in $breakpoints {
         @media (min-width: $width) {
             .p-#{$break}-#{$name} {
