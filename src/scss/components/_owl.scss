@@ -1,0 +1,27 @@
+.owl-carousel {
+  .owl-stage-outer {
+    overflow: visible;
+  }
+  &.default {
+    .owl-stage-outer {
+      overflow: hidden;
+    }
+  }
+}
+
+.owl-theme {
+  .owl-nav.disabled{
+    &+.owl-dots {
+      margin-top: 1.5rem;
+    }
+  }
+  .owl-dots {
+    .owl-dot {
+      &.active, &:hover {
+        span {
+          background-color: $main_theme;
+        }
+      }
+    }
+  }
+}

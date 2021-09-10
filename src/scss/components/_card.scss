@@ -60,10 +60,42 @@
                 background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.75));
             }
         }
+
+        &.video {
+            &::before {
+                content: '';
+                width: 75px;
+                height: 75px;
+                position: absolute;
+                left: 50%;
+                margin-left: -37.5px;
+                top: 30%;
+                background-image: url(../images/youtube-play-button.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: .8;
+                transition: transform .25s cubic-bezier(1, 0, 0, 1);
+                z-index: 1;
+            }
+            &:hover {
+                &::before {
+                    transform: scale(1.15);
+                }
+            }
+        }
     }
 
     .card-body {
         position: relative;
+    }
+}
+
+.default {
+    .card {
+        box-shadow: none !important;
+        .card-body {
+            background-color: $tertiary_theme;
+        }
     }
 }
 

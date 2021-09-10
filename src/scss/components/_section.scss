@@ -2,7 +2,8 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
     position: relative;
-    &:nth-child(2n+2) {
+    overflow-x: hidden;
+    &:nth-child(2n+3) {
         background-color: $gray_lighter;
         &::before {
             content: "";

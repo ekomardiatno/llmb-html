@@ -80,7 +80,9 @@ function css() {
   return gulp.src([
       config.bower + '/bootstrap/dist/css/bootstrap.min.css',
       config.bower + '/bootstrap/dist/css/bootstrap.min.css.map',
-      config.bower + '/lightgallery/dist/css/*.**'
+      config.bower + '/lightgallery/dist/css/*.**',
+      config.bower + '/owl.carousel/dist/assets/owl.carousel.min.css',
+      config.bower + '/owl.carousel/dist/assets/owl.theme.default.min.css',
     ])
     .pipe(gulp.dest('./dist/assets/css'))
 
@@ -97,7 +99,8 @@ function js() {
       config.bower + '/bootstrap/dist/js/bootstrap.min.js',
       config.bower + '/bootstrap/dist/js/bootstrap.min.js.map',
       config.bower + '/lightgallery/dist/lightgallery.min.js',
-      config.bower + '/lightgallery/dist/plugins/*/*.min.js'
+      config.bower + '/lightgallery/dist/plugins/*/*.min.js',
+      config.bower + '/owl.carousel/dist/owl.carousel.min.js',
     ])
     .pipe(gulp.dest('./dist/assets/js'))
 

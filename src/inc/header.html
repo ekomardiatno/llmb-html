@@ -7,6 +7,8 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/lightgallery.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
 
   <!-- lightgallery plugins -->
   <link rel="stylesheet" href="assets/css/lg-autoplay.css">
@@ -27,11 +29,15 @@
   <!-- Header -->
   <nav data-top-target="50" class="navbar fixed-top navbar-expand-lg scrlspy-affix">
     <div class="d-flex align-items-center mx--2">
-      <a class="navbar-brand mx-2" href="#">
+      <a class="navbar-brand mx-2" href="/">
         <img src="/assets/images/logo-xs.png" class="d-inline-block align-top" alt="" />
       </a>
       <h5 class="title-brand mx-2 mb-0 font-weight-bold">Lembaga Laskar Melayu Bersatu</h5>
     </div>
+
+    <button type="button" class="button-search ml-lg-2" data-toggle="modal" data-target="#searchModal">
+      <ion-icon class="icon-ion" name="search"></ion-icon>
+    </button>
     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <ion-icon name="menu"></ion-icon>
@@ -56,18 +62,42 @@
         <li class="nav-item">
           <a class="nav-link" href="/news.html">Berita</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/galleries.html">Galeri</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="galleryMenu" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Galeri
+          </a>
+          <div class="dropdown-menu" aria-labelledby="galleryMenu">
+            <a class="dropdown-item" href="/galleries.html">Foto</a>
+            <a class="dropdown-item" href="/videos.html">Video</a>
+          </div>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact.html">Kontak Kami</a>
         </li>
       </ul>
-      <form action="/search.html" class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2 rounded-pill border-0 blur strong" type="search" placeholder="Search"
-          aria-label="Search">
-      </form>
     </div>
     <div class="navbar-overlay"></div>
   </nav>
   <!-- End Header -->
+
+
+  <!-- Modal -->
+  <div class="modal blur fade" id="searchModal" tabindex="-1"
+    aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content border-0 bg-transparent">
+        <div class="modal-body d-flex m--2 py-4">
+          <form action="search.html" class="flex-fill mx-2" method="get">
+            <input class="form-control form-control-lg mr-sm-2 rounded-pill border-0 blur strong" type="search" placeholder="Search"
+              aria-label="Search">
+          </form>
+        </div>
+      </div>
+      <img class="d-block mx-auto" src="assets/images/search.png" />
+      <div class="mx-3">
+        <h3 class="text-center text-white font-weight-bold">Search</h3>
+        <p class="text-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </div>

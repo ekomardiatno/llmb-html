@@ -47,6 +47,25 @@
     }
 }
 
+.button-search {
+    order: 0;
+    background-color: transparent;
+    color: $white;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    border-radius: calc(35px / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-left: auto;
+    &:hover {
+        background-color: transparent;
+        color: $white;
+    }
+}
+
 .dropdown-menu {
     border: 0 !important;
     -webkit-backdrop-filter: saturate(200%) blur(40px) !important;
@@ -97,6 +116,7 @@
     ion-icon {
         font-size: 1.75rem;
         color: $white;
+        vertical-align: middle;
     }
 }
 
@@ -112,6 +132,14 @@
     .navbar-toggler {
         ion-icon {
             color: $text_dark;
+        }
+    }
+    .button-search {
+        background-color: $text_dark;
+        color: $white;
+        &:hover {
+            background-color: $text_dark;
+            color: $white;
         }
     }
     .navbar-brand {
@@ -148,6 +176,19 @@
             transform: rotate(45deg);
         }
     }
+
+    .button-search {
+        background-color: $white;
+        color: $text_dark;
+        ion-icon {
+            margin-left: -.01rem;
+            margin-bottom: -.01rem;
+        }
+        &:hover {
+            background-color: $white;
+            color: $text_dark;
+        }
+    }
 }
 
 @media (max-width: 991px) {
@@ -168,10 +209,30 @@
         }
     }
 
+    .affix {
+        .button-search {
+            background-color: transparent;
+            color: $text_dark;
+            &:hover {
+                background-color: transparent;
+                color: $text_dark;
+            }
+        }
+    }
+
     .navbar-toggler {
         &:not(.collapsed) {
             ion-icon {
                 color: $text_dark;
+            }
+
+            & ~ .button-search {
+                background-color: transparent;
+                color: $text_dark;
+                &:hover {
+                    background-color: transparent;
+                    color: $text_dark;
+                }
             }
         }
     }
@@ -189,6 +250,12 @@
     }
 }
 
+@media (min-width: 992px) {
+    .button-search {
+        order: 1;
+    }
+}
+
 @media (max-width: 767px) {
     .navbar {
         padding: 0.25rem 1rem !important;
@@ -196,7 +263,9 @@
     }
 
     .navbar-overlay {
-        background-size: auto 58px;
+        &::after {
+            background-size: auto 58px;
+        }
     }
     .navbar-brand {
         img {
