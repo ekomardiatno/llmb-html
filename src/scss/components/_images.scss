@@ -1,42 +1,18 @@
 .img-caption {
     padding: 0.5rem;
-    background-color: transparent;
+    background-color: $gray_lighter;
     border-radius: 8px;
     border: 1px solid $border_color;
     img {
         width: 100%;
         height: auto;
         border-radius: 8px;
-        box-shadow: 0 9px 26px -6px rgba(0, 0, 0, 0.15), 2px 8px 9px -4px rgba(0, 0, 0, 0.06) !important;
+        box-shadow: 0 9px 26px -6px rgba(0,0,0,.15),2px 8px 9px -4px rgba(0,0,0,.06) !important;
     }
     p {
         font-size: 80%;
         color: $text_muted;
         margin-top: 0.5rem;
         margin-bottom: 0;
-    }
-}
-
-.video-thumbnail {
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url(../images/youtube-play-button.png);
-        background-size: 30%;
-        background-position: center;
-        background-repeat: no-repeat;
-        opacity: 0.8;
-        transition: transform 0.25s cubic-bezier(1, 0, 0, 1);
-        z-index: 1;
-    }
-    &:hover {
-        &::after {
-            transform: scale(1.15);
-        }
     }
 }
