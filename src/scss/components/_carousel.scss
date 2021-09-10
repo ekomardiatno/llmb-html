@@ -30,8 +30,8 @@
     background-image: url(../images/overlay.png);
     background-size: cover;
     position: absolute;
-    top: 2px;
-    bottom: -2px;
+    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     background-size: 100% auto;
@@ -41,7 +41,7 @@
 }
 
 .carousel-item {
-    height: calc(100vw / 3 * 1);
+    max-height: 100vh;
     img {
         width: 100%;
         height: 100%;
@@ -92,51 +92,23 @@
     }
 }
 
-@media(max-width: 1200px) {
-    .carousel-content {
-        margin-right: 3rem;
-        margin-left: 3rem;
-        h1 {
-            font-size: 2rem;
-        }
-        p.h4 {
-            font-size: 1.5rem;
-        }
-        .boundary {
-            width: 95px;
-            height: calc(95px / 100 * 20);
-        }
-    }
-
-    .carousel-indicators {
-        margin-bottom: 0.1rem !important;
-        margin-left: 3rem !important;
-        margin-right: 3rem !important;
-        transform: translateY(0rem);
-        padding: 10px 5px !important;
-    }
-}
-
 @media(max-width: 991px) {
     .carousel-content {
         margin-right: 2rem;
         margin-left: 2rem;
         h1 {
-            font-size: 1.5rem;
-        }
-        p.h4 {
-            font-size: 1rem;
+            font-size: 2.5rem;
         }
     }
-
     .carousel-indicators {
-        margin-bottom: 0.1rem !important;
-        margin-left: 2rem !important;
+        margin-bottom: 2rem !important;
         margin-right: 2rem !important;
-        transform: translateY(0rem);
-        padding: 10px 5px !important;
+        margin-left: 2rem !important;
     }
 
+    .carousel-item {
+        height: 540px;
+    }
 }
 
 @media(max-width: 767px) {
@@ -146,35 +118,24 @@
         padding-top: 2rem;
         h1 {
             font-size: 1.5rem;
-            margin-bottom: .35rem;
+            margin-bottom: 1rem;
         }
         p.h4 {
-            font-size: .95rem;
+            font-size: 1rem;
         }
         .boundary {
             width: 100px;
             height: 20px;
-            display: none;
         }
     }
 
     .carousel-indicators {
-        margin-bottom: 0rem !important;
+        margin-bottom: 1rem !important;
         margin-left: 1rem !important;
         margin-right: 1rem !important;
-        transform: translateY(1.25rem);
-        padding: 5px 2.5px !important;
     }
-}
 
-@media(max-width: 539px) {
-    .carousel-content {
-        h1 {
-            font-size: 0.95rem;
-            margin-bottom: .35rem;
-        }
-        p.h4 {
-            font-size: 0.7rem;
-        }
+    .carousel-item {
+        height: 360px;
     }
 }
